@@ -49,7 +49,7 @@ def state_csection():
 # Hospitals with more C-Section Deliveries
 @app.route('/hospital_csection')
 def hospital_csection():
-    hospital_csection = df[df['Type of Delivery'] == 'C-Section'].groupby('Hospital Name').size()
+    hospital_csection = df[df['Type of Delivery'] == 'C-Section'].groupby('Hospital').size()
     hospital_csection = hospital_csection.sort_values(ascending=False).head(10)  # Top 10 hospitals
     fig, ax = plt.subplots()
     hospital_csection.plot(kind='bar', ax=ax)
@@ -65,7 +65,6 @@ def hospital_csection():
 # C-Section Deliveries and Seasons Relationship
 @app.route('/season_csection')
 def season_csection():
-    df['Season'] = df['Delivery Date'].apply(lambda x: 'Summer' if 'June' in x or 'July' in x or 'August' in x else 'Winter')  # Simplified season logic
     season_csection = df[df['Type of Delivery'] == 'C-Section'].groupby('Season').size()
     fig, ax = plt.subplots()
     season_csection.plot(kind='bar', ax=ax)
@@ -81,7 +80,7 @@ def season_csection():
 # Percentage of Second Child Birth with Normal Delivery if First Delivery was C-Section
 @app.route('/second_child_normal_delivery')
 def second_child_normal_delivery():
-    second_child = df[df['Child Number'] == 2]
+    second_child = df[df['Birth Order'] == 2]
     second_child_normal = second_child[second_child['Type of Delivery'] == 'Normal']
     percentage = (len(second_child_normal) / len(second_child)) * 100
     return render_template('percentage.html', percentage=percentage)
