@@ -1,0 +1,167 @@
+P1>
+\documentclass{article}
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyhead[l]{header}
+\fancyfoot[L]{Dept. of ISE, RNSIT}
+\fancyfoot[R]{\thepage}
+\pagestyle{fancy}
+\begin{document}
+% Section 1
+\section{Section 1}
+This is a paragraph of text in Section 1.
+% Section 2
+\section{Section 2}
+This is another paragraph of text in Section 2.
+\end{document}
+
+P2>
+\documentclass{article}
+ \begin{document}
+% Title and Author
+\title{Sample Abstract}
+\author{Author Name}
+\date{} % Remove date
+\maketitle
+% Abstract Section
+\section*{Abstract}
+This is a sample abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed ac velit sit amet lacus consequat dignissim. Mauris tincidunt justo eget velit dictum, vel
+consectetur libero consectetur. Nullam auctor ultricies eros, quis eleifend metus blandit et.
+Phasellus euismod massa id orci ultrices, quis feugiat urna consequat. Vivamus auctor dolor
+vel vestibulum tincidunt.
+Etiam ultricies nulla in dolor maximus bibendum. Proin vel metus pretium,
+laoreet est nec, ultricies orci. Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Integer faucibus commodo orci, ac tempus sapien
+molestie nec. Phasellus ut dui nisi. Nullam non erat nec turpis faucibus hendrerit. Curabitur
+nec mauris sit amet ligula facilisis pharetra. Duis id dolor vitae sem venenatis ultrices.
+% Additional Sections (if needed)
+% \section{Introduction}
+% \section{Methodology}
+% \section{Results}
+% \section{Discussion}
+% \section{Conclusion}
+ \end{document}
+
+ P3>
+ \documentclass{article}
+\usepackage{graphicx} % for including images
+\usepackage{geometry} % for setting page dimensions
+\usepackage{setspace} % for setting line spacing
+% Define page dimensions
+\geometry{a4paper, margin=1in}
+\begin{document}
+\begin{titlepage}
+\centering
+% VTU Logo
+\includegraphics[width=0.3\textwidth]{vtu_logo.png}
+\vspace{0.5cm}
+% Title
+\textbf{\LARGE Project Report Title}
+\vspace{1cm}
+% Student Information
+\textbf{By}\\
+Your Name\\
+USN: 1ABCD23\\
+Branch: Information Science\\
+\vspace{1cm}
+% Guide Information
+\textbf{Guide:}\\
+Guide Name\\
+Designation\\
+Department of Information Science\\
+\vspace{1.5cm}
+% Institute Details
+\textbf{Department of Information Science and Engineering}\\
+College Name\\
+Location\\
+\vspace{1cm}
+% Date
+\textbf{Date: \today} % Use today's date
+\end{titlepage}
+\end{document}
+
+P4>
+\documentclass[a4paper]{article}
+\usepackage{graphicx} % for including images
+\usepackage{geometry} % for setting page dimensions
+\usepackage{setspace} % for setting line spacing
+% Define page dimensions
+\geometry{margin=1in}
+\begin{document}
+\thispagestyle{empty} % Remove page number from the certificate page
+% Title and Logo
+\begin{center}
+\includegraphics[width=0.3\textwidth]{vtu_logo.png} % University logo
+\vspace{1cm}
+\textbf{\Large Certificate of Completion}
+\vspace{0.5cm}
+\end{center}
+% Certificate Text
+\noindent
+This is to certify that \underline{\hspace{6cm}} (Registration Number:
+\underline{\hspace{4cm}}) has successfully completed the course on
+\underline{\hspace{8cm}} conducted by the Department of \underline{\hspace{6cm}} at
+\underline{\hspace{8cm}}.
+\vspace{1cm}
+% Date
+\noindent
+Date: \underline{\hspace{4cm}}
+\vfill
+% Signature
+\begin{flushright}
+\textbf{Signature:} \underline{\hspace{6cm}}
+\end{flushright}
+\end{document}
+
+P5>
+ \documentclass{article}
+\usepackage{array} % for custom column formatting
+\usepackage{booktabs} % for better table rules
+\usepackage{caption} % for customizing table captions
+\begin{document}
+\section*{Student Performance Table}
+\begin{table}[h]
+\centering
+\caption{Student Marks Summary}
+\label{tab:student-marks}
+\begin{tabular}{|c|c|l|c|c|c|}
+\hline
+\textbf{S.No} & \textbf{USN} & \textbf{Student Name} &
+\textbf{Subject1} & \textbf{Subject2} & \textbf{Subject3} \\
+\hline
+1 & 4XX22XX001 & Name 1 & 79 & 60 & 90 \\
+2 & 4XX22XX002 & Name 2 & 78 & 45 & 98 \\
+3 & 4XX22XX003 & Name 3 & 36 & 75 & 59 \\
+\hline
+\end{tabular}
+\end{table}
+\end{document} 
+
+P6>
+\documentclass{article}
+\usepackage{graphicx} % for including graphics
+\usepackage{subcaption} % for subfigures
+\begin{document}
+\section{Side-by-Side Subfigures}
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}[b]{0.4\textwidth}
+\centering
+\includegraphics[width=\textwidth]{example-image-a} %
+Include first image
+\caption{Subfigure A}
+\label{fig:subfig-a}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.4\textwidth}
+\centering
+\includegraphics[width=\textwidth]{example-image-b} %
+Include second image
+\caption{Subfigure B}
+\label{fig:subfig-b}
+\end{subfigure}
+\caption{Two Side-by-Side Subfigures}
+\label{fig:side-by-side}
+\end{figure}
+\end{document}
